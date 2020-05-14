@@ -1,13 +1,39 @@
+/* soft reset do css */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+}
+
 body{
-    background-image: url(https://i.pinimg.com/originals/3c/24/46/3c24462450c2a902bf7e18f3d9aada81.jpg);
-    background-size: auto 100vh;
+    background-image: url('../imagens/Fundo.jpg');
     font-family: helvetica;
     height: 100vh; 
+    font-size: 14px;
+  }
+/*se a tela tver pelo menos 400px vai carregar esses estilos*/
+  @media (min-width: 400px)
+  {
+body{
+  font-size: 18px;
+}
+  }
+
+  header{
+    height: 100vh;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+
   }
   
   .menu{
     background-color: navy;  
-  }
+    position: fixed;
+    width: 100vw;
+    top: 0;
+
+    }
   
   .menu ul{
     display: flex;
@@ -18,6 +44,10 @@ body{
     list-style: none;
   }
   
+  .menu a{
+    display: block; 
+    padding: 7px 20px
+    }
   a{
     color: whitesmoke;  
     font-style: italic; 
@@ -32,10 +62,16 @@ body{
   .site-title {
     color: whitesmoke;
     text-align: center;
-    
   }
   
+  .site-title {
+    font-size: 3em;
+  }
   .site-subtitle {
     font-style: italic;
   }
   
+  .img-portfolio{
+    height: 180px;
+    width: 180px;
+  } 
