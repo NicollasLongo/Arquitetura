@@ -5,21 +5,20 @@ padding: 0;
 box-sizing: border-box; 
 }
 
-body{
+body {
     background-image: url('../imagens/Fundo.jpg');
-    font-family: helvetica;
+    font-family: 'Source Code Pro', monospace;
     height: 100vh; 
-    font-size: 14px;
+    font-size: 12px;
   }
 /*se a tela tver pelo menos 400px vai carregar esses estilos*/
-  @media (min-width: 400px)
-  {
-body{
-  font-size: 18px;
+  @media (min-width: 400px) {
+body {
+  font-size: 14px;
 }
   }
 
-  header{
+  header {
     height: 100vh;
     display: flex;  
     justify-content: center;  
@@ -27,28 +26,29 @@ body{
 
   }
   
-  .menu{
+  .menu {
     background-color: navy;  
     position: fixed;
-    width: 100vw;
     top: 0;
-
+    width: 100vw;  
     }
   
-  .menu ul{
+  .menu ul {
     display: flex;
     justify-content: space-around; 
-  }
-  
-  .menu li{
+    width: 100vw;
+}
+
+ .menu li {
     list-style: none;
   }
   
-  .menu a{
+  .menu a {
     display: block; 
     padding: 7px 20px
     }
-  a{
+
+  a {
     color: whitesmoke;  
     font-style: italic; 
     text-decoration: none;
@@ -65,13 +65,53 @@ body{
   }
   
   .site-title {
-    font-size: 3em;
+    font-size: 4em;
+    font-family: 'Gloria Hallelujah', cursive;
   }
   .site-subtitle {
     font-style: italic;
+    font-family: 'Shadows Into Light Two', cursive;
+    line-height: 1.8em;
   }
-  
-  .img-portfolio{
+  .portfolio {
+    text-align: center;
+    padding: 2em;
+    height: 100vh;
+  }
+  .portfolio h2 {
+    font-family: 'Shadows Into Light Two', cursive;
+    color:whitesmoke; 
+    margin:   1em;
+    font-size: 1.5em; 
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em; 
+  }
+
+  @media(min-width: 560px) {
+    .portfolio .grid{
+    grid-template-columns: 350px 350px;
+    }
+  }
+
+  @media(min-width: 880px) {
+    .portfolio .grid{
+    grid-template-columns: repeat(3,350px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 4em - 48px - 1.5em);
+    }
+  }
+
+  .portfolio figure {
+text-align: center;
+  }
+  .img-portfolio {
     height: 180px;
-    width: 180px;
+    width: 350px;
+    object-fit: cover;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
   } 
